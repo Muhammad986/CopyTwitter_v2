@@ -51,6 +51,14 @@ export default class App extends Component {
         });
     }
 
+    onToggleImportant = (id) => {
+        console.log(`Important: ${id}`);
+    }
+
+    onToggleLiked = (id) => {
+        console.log(`Liked: ${id}`);
+    }
+
     render() {
         return (
             <div className="app">
@@ -61,7 +69,9 @@ export default class App extends Component {
                 </div>
                 <PostList 
                     posts={this.state.data}
-                    onDelete={this.deleteItem}/>
+                    onDelete={this.deleteItem}
+                    onToggleImportant={this.onToggleImportant}
+                    onToggleLiked={this.onToggleLiked}/>
                 <PostAddForm
                     onAdd={this.addItem}/>
             </div>
