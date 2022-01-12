@@ -26,5 +26,7 @@ export default class PostStatusFilter extends Component {
                 {buttons}
             </div>
         )
+
     }
+    
 }
